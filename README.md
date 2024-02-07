@@ -2,7 +2,7 @@
 ## Introduction
 The purpose of this project is to develop a guitar effects pedal switcher that brings the advantages 
 of a multi effects unit to an array of discrete effects pedals, which any guitarist will tell you, 
-sound better than most multifx systems. Lets not have that argument here &smile; Suffice to say, the 
+sound better than most multifx systems. Lets not have that argument here U+1F605 Suffice to say, the 
 primary disadvantage of a selection of custom effects pedals is a spasmodic dance when switching them in and out. The primaray advantage of a multi effect unit is being able to tap an **up** or a **down** button to run through a list of presets. This project aims to allow you to build a 2 path by 4 slot matrix switcher that brings the multi effects advantage to a custom pedal board of "hand 
 chosen" "squash boxes."
 
