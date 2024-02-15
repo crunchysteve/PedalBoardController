@@ -2,7 +2,7 @@
 #include <EEPROM.h>
 #include <EdgieD.h>
 
-#include "scope.h" //  See include/pins.h in project heirarchy
+#include "scope.h"      //  See include/scope.h in project heirarchy
 #include "functions.h"  //  See include/functions.h in project heirarchy
 
 //  instantiate button debounce classes
@@ -19,7 +19,7 @@ void setup() {
   //  Set Relay and LED pins as OUTPUTS
   for(int i = RELAY_A_BP; i <= RELAY_D_PS; i++) pinMode(i,OUTPUT);
   //  read last used settings on startup
-  fromByte(EEPROM.read(0));   //  All changes to current settings update to EEPROM 0
+  fromByte(EEPROM.read(0));   //  Load default working state at last power off
 }
 
 void loop() {
