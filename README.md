@@ -1,20 +1,37 @@
 # Pedal Board Controller
 
-*Maintainer's note: * I've been looking at Joyo's PXL-Pro and Pxl-Live loop switchers, these offer the 
-more traditional style loop control and I'm thinking a redesign might be the go. That said, as a sound 
-guy, to me, guitar pedals have 6 distinct types, signal conditioning (you only need one set of these), 
-signal tracking (pitch and synths), drive (overdrive or distortionO, modulation (chorus or flange) and 
-space/impulse (echo and reverb), then your amp or amp sim (you may have 2 amps,  you'll probably only 
-have one amp sim with lots of patches, and thise, again, like conditioning, are better switched after 
-the loops. So, I'm rethinking my 4x A/B(+optional/C/D) design ans an 8x bypass loop can do this, at 
-least to A/B depth. I'm also wondering if the 4xA/B-Y model can be hybridised with the 8xbypass model.
+*Maintainer's note (final) 20240310: * I've decided that I have been pushing on with this for reasons of 
+"sunk cost falacy." I have a housing, some relay modules, dozens of microcontroller boards of many 
+shapes and sizes, but fitting them all into a loop switcher housing (254mm x 71mm x 50mm) is impossible 
+if you add a few dozen jacks and even an Arduino nano. A 4x pair switcher like this is even more 
+complicated because it needs 8 pushbuttons and there's already no more room if I use off-the-shelf 
+modules.
+
+Custom circuit board(s)? I've already spent half the cost of a Joyo PXL-Live, now I'd be buying 5 pairs 
+of PCBs for a project that would be using 1 of each, discrete relays, transistors, resistors, jacks,
+pcb mount foot buttons... You can probably see where I'm heading. I'm just gunna cut my losses and 
+buy a Joyo unit. I'll probably keep tweaking this code, or even bring it more into line with the more
+typical bypass loop model, like the PXL series, but testing will be on the workbench only. Housing 
+this project is not part of this project any longer. This makes it less hardware focused and more 
+general than just effects pedal switching, therefore useful to irrgation, home automation, model rail, 
+etc.
+
+~~ *Maintainer's note 20240307: * I've been looking at Joyo's PXL-Pro and Pxl-Live loop switchers, these 
+offer the more traditional style loop control and I'm thinking a redesign might be the go. That said, 
+as a sound guy, to me, guitar pedals have 6 distinct types, signal conditioning (you only need one set 
+of these), signal tracking (pitch and synths), drive (overdrive or distortionO, modulation (chorus or 
+flange) and space/impulse (echo and reverb), then your amp or amp sim (you may have 2 amps,  you'll 
+probably only have one amp sim with lots of patches, and thise, again, like conditioning, are better 
+switched after the loops. So, I'm rethinking my 4x A/B(+optional/C/D) design ans an 8x bypass loop can 
+do this, at least to A/B depth. I'm also wondering if the 4xA/B-Y model can be hybridised with the 
+8xbypass model. ~~
 
 ## Introduction
 The purpose of this project is to develop a guitar effects pedal switcher that brings the advantages 
 of a multi effects unit to an array of discrete effects pedals. Think along the lines of devices 
-like the -Moen GEC4 or 5 devices or the Joyo PXL series- (see above note.) Any guitarist will tell you these sorts of 
-loop controllers sound better than most multifx systems, but lets not have that argument here 
-&#128517;
+like the -Moen GEC4 or 5 devices or the Joyo PXL series- (see above note.) Any guitarist will tell you 
+these sorts of loop controllers sound better than most multifx systems, but lets not have that argument 
+here &#128517;
 
 Suffice to say, the primary disadvantage of a selection of custom effects pedals is a spasmodic 
 dance when switching them in and out. The primaray advantage of a multi effect unit is being able to 
